@@ -53,7 +53,7 @@ function Section({ title, apiUrl }) {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      const label = response.data.prediction;
+      const label = response.data.prediction[0];
       setPrediction(label);
 
       const nutriRes = await axios.post(
